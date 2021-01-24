@@ -1,12 +1,12 @@
-﻿using System;
+﻿using ComputeService.v3.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using ComputeService.v1.Interfaces;
 
-namespace ComputeService.v1.Services.Encryption
+namespace ComputeService.v3.Services.Encryption
 {
     public class AesService : IEncryption
     {
@@ -29,7 +29,7 @@ namespace ComputeService.v1.Services.Encryption
 
         public IEnumerable<byte> Encrypt(IEnumerable<byte> data, IEnumerable<byte> key, IEnumerable<byte> iv, int iterations = 5000)
         {
-            var givenData = (List<byte>) data;
+            var givenData = (List<byte>)data;
 
             using var aes = AesSetUp(key, iv);
             using var memory = new MemoryStream(givenData.Count());

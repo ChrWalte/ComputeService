@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using ComputeService.v3.Interfaces;
+using ComputeService.v3.Shared;
+using System.Collections.Generic;
 using System.Security.Cryptography;
-using ComputeService.v1.Interfaces;
-using ComputeService.v1.Shared;
 
-namespace ComputeService.v1.Services.Hash
+namespace ComputeService.v3.Services.Hash
 {
-    public class Sha1Service : IHash
+    public class Md5Service : IHash
     {
         public string Hash(string data, int iterations = 5000)
         {
@@ -16,8 +16,8 @@ namespace ComputeService.v1.Services.Hash
 
         public IEnumerable<byte> Hash(IEnumerable<byte> data, int iterations = 5000)
         {
-            using var sha1 = SHA1.Create();
-            var hashedData = IHash.Generate(sha1, data, iterations);
+            using var md5 = MD5.Create();
+            var hashedData = IHash.Generate(md5, data, iterations);
             return hashedData;
         }
     }

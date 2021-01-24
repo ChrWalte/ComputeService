@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ComputeService.v3.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using ComputeService.v1.Interfaces;
 
-namespace ComputeService.v1.Services.Random
+namespace ComputeService.v3.Services.Random
 {
     public class RandomNumberService : IRandom<int>
     {

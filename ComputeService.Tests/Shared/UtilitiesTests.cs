@@ -1,4 +1,4 @@
-﻿using ComputeService.v1.Shared;
+﻿using ComputeService.v3.Shared;
 using NUnit.Framework;
 
 namespace ComputeService.Tests.Shared
@@ -28,14 +28,14 @@ namespace ComputeService.Tests.Shared
         [TestCase("data", "pepper", "datapepper")]
         public void ApplyPepperTests(string data, string pepper, string expected)
         {
-            var actual = Utilities.ApplyPepper(data, pepper); 
+            var actual = Utilities.ApplyPepper(data, pepper);
             Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        [TestCase("", new byte[] {})]
+        [TestCase("", new byte[] { })]
         [TestCase("a", new byte[] { 97 })]
-        [TestCase("ab", new byte[] { 97, 98})]
+        [TestCase("ab", new byte[] { 97, 98 })]
         public void StringToBytesTests(string data, byte[] expected)
         {
             var actual = Utilities.StringToBytes(data);

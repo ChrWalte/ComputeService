@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace ComputeService.v1.Shared
+namespace ComputeService.v3.Shared
 {
     public static class Utilities
     {
@@ -18,7 +18,7 @@ namespace ComputeService.v1.Shared
             => Encoding.UTF8.GetBytes(data);
 
         public static string BytesToString(IEnumerable<byte> data)
-            => Encoding.UTF8.GetString((byte[]) data);
+            => Encoding.UTF8.GetString((byte[])data);
 
         public static string HashBytesToString(IEnumerable<byte> data)
         {

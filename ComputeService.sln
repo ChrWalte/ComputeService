@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeService", "ComputeService\ComputeService.csproj", "{44400BAE-78EC-47D7-82B7-CD8C0F2E1606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputeService.Tests", "ComputeService.Tests\ComputeService.Tests.csproj", "{D67E1F8C-3A85-4522-A09B-057F9DD25FBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeService.Tests", "ComputeService.Tests\ComputeService.Tests.csproj", "{D67E1F8C-3A85-4522-A09B-057F9DD25FBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

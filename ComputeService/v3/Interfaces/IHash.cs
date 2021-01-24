@@ -2,12 +2,14 @@
 using System.Linq;
 using System.Security.Cryptography;
 
-namespace ComputeService.v1.Interfaces
+namespace ComputeService.v3.Interfaces
 {
     public interface IHash
     {
         string Hash(string data, int iterations = 5000);
+
         IEnumerable<byte> Hash(IEnumerable<byte> data, int iterations = 5000);
+
         protected static bool CheckHash(string first, string second)
             => first.Equals(second);
 

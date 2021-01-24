@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using ComputeService.v1.Interfaces;
+﻿using ComputeService.v3.Interfaces;
+using System.Collections.Generic;
 
-namespace ComputeService.v1.Services.Random
+namespace ComputeService.v3.Services.Random
 {
     public class RandomStringService : IRandom<string>
     {
