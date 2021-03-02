@@ -29,10 +29,10 @@ namespace ComputeService.v3.Services.Random
 
         public IEnumerable<int> Generate(int count)
         {
-            var randomNumbers = new int[count];
+            var randomNumbers = new List<int>();
 
             for (var i = 0; i < count; i++)
-                randomNumbers[i] = Generate();
+                randomNumbers.Add(Generate());
 
             return randomNumbers;
         }

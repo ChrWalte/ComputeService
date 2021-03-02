@@ -19,24 +19,24 @@ namespace ComputeService.v3.Services.Random
 
         public string Generate()
         {
-            var password = "";
+            var value = "";
             var randomNumberService = new RandomNumberService(0, _chars.Length - 1);
             var randomNumbers = (List<int>)randomNumberService.Generate(_length);
 
             for (var i = 0; i < _length; i++)
-                password += _chars[randomNumbers[i]];
+                value += _chars[randomNumbers[i]];
 
-            return password;
+            return value;
         }
 
         public IEnumerable<string> Generate(int count)
         {
-            var passwords = new string[count];
+            var values = new List<string>();
 
             for (var i = 0; i < count; i++)
-                passwords[i] = Generate();
+                values.Add(Generate());
 
-            return passwords;
+            return values;
         }
     }
 }
